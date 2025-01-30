@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OEE Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <h1 class="header-title">OEE PHARMALINE</h1>
+    </header>
+
+    <!-- Filter Controls Section -->
+    <section class="filters-section">
+        <div class="filter-controls">
+            <label class="filter-label" for="from-date">From:</label>
+            <input id="from-date" class="filter-input" type="date" />
+            <input id="from-time" class="filter-input" type="time" />
+
+            <label class="filter-label" for="to-date">To:</label>
+            <input id="to-date" class="filter-input" type="date" />
+            <input id="to-time" class="filter-input" type="time" />
+
+            <select class="filter-input">
+                <option>Machine</option>
+                <!-- Additional options can be added here -->
+            </select>
+
+            <button class="refresh-button">Refresh</button>
+        </div>
+    </section>
+
+    <!-- Main Container for Metrics -->
+    <div class="container">
+        <!-- Top Metrics Section -->
+        <div class="top-metrics">
+            <!-- Overall Equipment Effectiveness Section -->
+            <section class="rectangle">
+                <h2 class="metric-title">Overall Equipment Effectiveness</h2>
+
+                <div class="metric-row">
+                    <span>OEE</span>
+                    <span>52%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill progress-oee"></div>
+                </div>
+
+                <div class="metric-row">
+                    <span>Availability</span>
+                    <span>37%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill progress-availability"></div>
+                </div>
+
+                <div class="metric-row">
+                    <span>Performance</span>
+                    <span>89%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill progress-performance"></div>
+                </div>
+
+                <div class="metric-row">
+                    <span>Quality</span>
+                    <span>70%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-bar-fill progress-quality"></div>
+                </div>
+            </section>
+
+            <!-- Current Production Section -->
+            <section class="rectangle">
+                <h2 class="metric-title">Current Production</h2>
+
+                <div class="status-row">
+                    <span><span class="status-icon status-accept"></span> Accept</span>
+                    <span>1000.0</span>
+                </div>
+
+                <div class="status-row">
+                    <span><span class="status-icon status-reject"></span> Reject</span>
+                    <span>12.0</span>
+                </div>
+            </section>
+
+            <!-- Time Loss Section -->
+            <section class="rectangle">
+                <h2 class="metric-title">Time Loss (minutes)</h2>
+                <!-- Add any relevant content for Time Loss here -->
+            </section>
+        </div>
+
+        <!-- Error Analysis Section -->
+        <section class="rectangle">
+            <h2 class="metric-title">Error Analysis</h2>
+            <!-- Add any relevant content for Error Analysis here -->
+        </section>
+    </div>
+</body>
+</html>
